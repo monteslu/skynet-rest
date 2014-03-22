@@ -57,7 +57,14 @@ Plugin.prototype.onMessage = function(data, cb){
       method: payload.method || 'GET',
       entity: payload.entity
   });
-  return bindCallback(result, cb);
+
+  if(cb){
+    result.then(function(val){
+      cb({result: val});
+    },function(err){
+      cb({error: err});
+    });
+  }
 };
 
 Plugin.prototype.destroy = function(){

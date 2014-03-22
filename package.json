@@ -1,6 +1,6 @@
 {
   "name": "skynet-rest",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Skynet Gateway plugin for making REST calls",
   "keywords": [
     "skynet-plugin"
